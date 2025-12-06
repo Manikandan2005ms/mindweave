@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MindWeave – Thought Mapping with Gemini 3 Pro</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1>MindWeave</h1>
+      <p>Visualize your thinking. Analyze clarity, emotion, and logic using Gemini 3 Pro.</p>
+    </header>
+
+    <main class="app-main">
+      <section class="input-section">
+        <h2>1. Paste your idea / thoughts</h2>
+        <textarea id="ideaInput" placeholder="Type or paste your idea, plan, answer, or explanation here..."></textarea>
+        <button id="analyzeBtn">Analyze My Thinking</button>
+        <p id="statusMessage" class="status-message"></p>
+      </section>
+
+      <section class="result-section hidden" id="resultSection">
+        <h2>2. Analysis Result</h2>
+
+        <div class="cards-row">
+          <div class="card">
+            <h3>Main Idea</h3>
+            <p id="mainIdea"></p>
+          </div>
+
+          <div class="card">
+            <h3>Clarity & Emotion</h3>
+            <p><strong>Clarity Score:</strong> <span id="clarityScore"></span>/100</p>
+            <div class="clarity-bar">
+              <div id="clarityBarFill" class="clarity-bar-fill"></div>
+            </div>
+            <p><strong>Emotion:</strong> <span id="emotion"></span></p>
+          </div>
+        </div>
+
+        <div class="cards-row">
+          <div class="card">
+            <h3>Sub Ideas</h3>
+            <div id="subIdeas"></div>
+          </div>
+
+          <div class="card">
+            <h3>Logic Gaps</h3>
+            <ul id="logicGaps"></ul>
+          </div>
+
+          <div class="card">
+            <h3>Improvements</h3>
+            <ul id="improvements"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">
+      <small>Built with ❤️ using Gemini 3 Pro</small>
+    </footer>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
